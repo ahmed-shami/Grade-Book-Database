@@ -1,4 +1,4 @@
-# Abdul Nafay Saleem, Ahmed Mohammed, Rodak Tehwodoros
+# Abdul Nafay Saleem, Ahmed Mohammed, Rodak Tehwodoros Beckure
 # Gradebook — README
 
 ## Overview
