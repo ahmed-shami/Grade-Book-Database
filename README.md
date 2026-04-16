@@ -10,6 +10,16 @@ implemented.
 
 ---
 
+## Design Decisions
+
+**ENROLLMENT** is a separate bridge table rather than a direct link between STUDENT and COURSE. This cleanly models the many-to-many relationship and lets the GRADE table reference a single `enrollment_id` instead of repeating both `student_id` and `course_id` everywhere.
+
+**CATEGORY** is its own table rather than a column on COURSE. This allows each course to define any number of grading categories with arbitrary weights, so the distribution (e.g. 10% participation, 50% tests) can vary per course and change at any time without altering the schema.
+
+**GRADE** links ENROLLMENT and ASSIGNMENT rather than STUDENT and ASSIGNMENT. This enforces that only students who are actually enrolled in a course can receive grades for that course's assignments — an unenrolled student cannot have a grade row inserted without a valid enrollment.
+
+---
+
 ## File manifest
 
 | File | Purpose |
