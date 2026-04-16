@@ -33,7 +33,7 @@ No third-party packages are required.
 
 ## How to compile / run
 
-### Option A — Python runner (recommended)
+### Python runner
 
 ```bash
 # From the directory containing both files:
@@ -44,22 +44,6 @@ The script:
 1. Opens an in-memory SQLite database.
 2. Executes `gradebook.sql` to create tables and load sample data.
 3. Runs every task (4-12) and prints results to stdout.
-
-### Option B — SQLite CLI
-
-```bash
-sqlite3 gradebook.db < gradebook.sql
-```
-
-Then open the database interactively:
-
-```bash
-sqlite3 gradebook.db
-sqlite> .tables
-sqlite> SELECT * FROM course;
-```
-
----
 
 ## Database schema (summary)
 
